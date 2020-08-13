@@ -51,7 +51,7 @@
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-registry-prometheus</artifactId>
 		</dependency>
-		<!-- <dependency> <groupId>com.philips</groupId> <artifactId>test-project</artifactId> 
+		<!-- <dependency> <groupId>com.sony</groupId> <artifactId>test-project</artifactId> 
 			<version>V0.0.6-SNAPSHOT</version> </dependency> -->
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -83,7 +83,6 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.13</version>
 		</dependency>
 	</dependencies>
 

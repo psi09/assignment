@@ -1,0 +1,14 @@
+version: "3"
+services:
+  app:
+    build: .
+    container_name: pet_service
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+    expose:
+      - "${APP_PORT}"
+    volumes:
+      - ./volume/:/usr/src/app

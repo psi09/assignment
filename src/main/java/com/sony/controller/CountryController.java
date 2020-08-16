@@ -52,7 +52,7 @@ public class CountryController {
 	public ResponseEntity<APIStatus> diag() {
 		LOGGER.info("Checking API health..");
 		try {
-			response = restTemplate.getForEntity(new URI("http://localhost:8080/health"), String.class);
+			response = restTemplate.getForEntity(new URI("http://localhost:8080/actuator/health"), String.class);
 			if (null != response) {
 				apiStatus.setStatusCode(response.getStatusCodeValue());
 				apiStatus.setStatus(response.getStatusCode().OK.name());

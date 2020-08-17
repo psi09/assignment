@@ -42,13 +42,14 @@ public class CountryController {
 	private APIStatus apiStatus = new APIStatus();
 	private ResponseEntity<String> response;
 	private CountryCodes countryCodes;
+	//private ObjectMapper objectMapper = new ObjectMapper();
 
 	@GetMapping("/greeting")
 	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
 
-	@GetMapping("/diag")
+	@GetMapping(value = "/diag", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<APIStatus> diag() {
 		LOGGER.info("Checking API health..");
 		try {
